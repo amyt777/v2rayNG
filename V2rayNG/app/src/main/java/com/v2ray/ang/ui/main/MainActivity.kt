@@ -101,7 +101,7 @@ class MainActivity : HelperBaseComponentActivity() {
     @Composable
     override fun ScreenContent() {
         BackHandler { moveTaskToBack(false) }
-        MainScreen(
+        BornaliHomeScreen(
             mainViewModel = mainViewModel,
             onAction = { action ->
                 when (action) {
@@ -122,6 +122,7 @@ class MainActivity : HelperBaseComponentActivity() {
                 }
             },
             onNavigate = { route -> navigateTo(route) },
+            onExit = { finish() },
         )
     }
 
