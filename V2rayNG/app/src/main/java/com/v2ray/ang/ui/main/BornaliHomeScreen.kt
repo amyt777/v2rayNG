@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -437,7 +438,7 @@ fun BornaliHomeScreen(
 private fun BornaliCard(
     label: String,
     onClick: () -> Unit,
-    content: @Composable Row.() -> Unit,
+    content: @Composable RowScope.() -> Unit,
 ) {
     Box(
         modifier = Modifier
@@ -468,7 +469,7 @@ private fun BornaliCard(
 }
 
 @Composable
-private fun Row.BornaliBottomButton(
+private fun RowScope.BornaliBottomButton(
     label: String,
     iconRes: Int,
     modifier: Modifier,
